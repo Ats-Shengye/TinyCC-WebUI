@@ -1,0 +1,342 @@
+/* TinyCC-WebUI Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2f2f2f;
+  color: #e5e5e5;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #3e3e3e;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.project-name {
+  font-size: 1rem;
+  color: #e5e5e5;
+  font-weight: 500;
+}
+
+.header-actions button {
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  color: #d97706;
+  border: 1px solid #d97706;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.header-actions button:hover {
+  background-color: rgba(217, 119, 6, 0.1);
+}
+
+/* Sessions Panel */
+.sessions-panel {
+  position: absolute;
+  top: 70px;
+  right: 2rem;
+  width: 400px;
+  max-height: 500px;
+  background-color: #1f1f1f;
+  border: 1px solid #3e3e3e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  z-index: 1000;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sessions-panel h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #d97706;
+}
+
+/* F6: Project selector */
+.project-selector {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-selector label {
+  font-size: 0.9rem;
+  color: #9cdcfe;
+}
+
+#project-select {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: #2f2f2f;
+  color: #e5e5e5;
+  border: 1px solid #3e3e3e;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+#project-select:focus {
+  outline: none;
+  border-color: #d97706;
+}
+
+#sessions-list {
+  margin-bottom: 1rem;
+}
+
+.session-item {
+  padding: 0.75rem;
+  background-color: #2f2f2f;
+  border: 1px solid #3e3e3e;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.session-item:hover {
+  background-color: #3a3a3a;
+  border-color: #d97706;
+}
+
+.session-filename {
+  font-size: 0.9rem;
+  color: #4ec9b0;
+  margin-bottom: 0.25rem;
+}
+
+.session-preview {
+  font-size: 0.85rem;
+  color: #9cdcfe;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#close-sessions-btn {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: transparent;
+  color: #e5e5e5;
+  border: 1px solid #3e3e3e;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#close-sessions-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Main Chat Area */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-output {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: #2f2f2f;
+}
+
+.message {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #1f1f1f;
+  border-left: 4px solid #d97706;
+}
+
+.message.user {
+  border-left-color: #d97706;
+  background-color: #252525;
+}
+
+.message.assistant {
+  border-left-color: #d97706;
+}
+
+.message.error {
+  border-left-color: #ef4444;
+  background-color: #3b1f1f;
+}
+
+.message-role {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #d97706;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.message-content {
+  line-height: 1.6;
+  color: #e5e5e5;
+}
+
+.message-content code {
+  background-color: #252525;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  color: #f59e0b;
+}
+
+.message-content pre {
+  background-color: #252525;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+
+.message-content pre code {
+  background-color: transparent;
+  padding: 0;
+  color: #e5e5e5;
+}
+
+.info {
+  color: #858585;
+  font-style: italic;
+}
+
+/* Input Area */
+.input-area {
+  padding: 1rem 2rem 1.5rem;
+  background-color: #1f1f1f;
+  border-top: 1px solid #3e3e3e;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+#user-input {
+  width: 100%;
+  padding: 1rem 4rem 1rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #2f2f2f;
+  color: #e5e5e5;
+  border: 1px solid #3e3e3e;
+  border-radius: 16px;
+  resize: vertical;
+  min-height: 60px;
+  max-height: 200px;
+  transition: all 0.2s;
+}
+
+#user-input:focus {
+  outline: none;
+  border-color: #d97706;
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.1);
+}
+
+.send-button,
+.stop-button {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d97706;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.send-button:hover:not(:disabled) {
+  background-color: #f59e0b;
+  transform: scale(1.05);
+}
+
+.stop-button {
+  background-color: #ef4444;
+}
+
+.stop-button:hover:not(:disabled) {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+.send-button:disabled,
+.stop-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Hide stop button by default */
+.stop-button {
+  display: none;
+}
+
+.input-footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.char-count {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2f2f2f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}

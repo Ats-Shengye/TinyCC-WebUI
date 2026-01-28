@@ -1,0 +1,30 @@
+{
+  "name": "tinycc-webui",
+  "version": "0.1.0",
+  "description": "Browser-based frontend for Claude Code CLI",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --check ."
+  },
+  "keywords": [
+    "claude-code",
+    "webui",
+    "cli-frontend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "vitest": "^4.0.18"
+  }
+}

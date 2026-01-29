@@ -1,6 +1,12 @@
 # TinyCC-WebUI
 
-Claude Code CLI のブラウザベースフロントエンド
+スマホからClaude Code CLIの日本語入力をしやすくするWebUI。
+
+- セキュリティ対策12項目
+- テスト63件
+- セッション管理・プロジェクト切り替え対応
+
+> 技術詳細は [GLOSSARY.md](./GLOSSARY.md) を参照
 
 ## 概要
 
